@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurisdiction API</title>
+</head>
+<body>
+<h1>Jurisdiction API</h1>
+
+<!-- Yeni Jurisdiction əlavə etmək üçün form -->
+<h2>Yeni Jurisdiction Əlavə Et</h2>
+<form id="jurisdictionForm">
+    <label for="jurisdictionName">Ad:</label>
+    <input type="text" id="jurisdictionName" required><br><br>
+
+    <label for="jurisdictionAddress">Ünvan:</label>
+    <input type="text" id="jurisdictionAddress" required><br><br>
+
+    <label for="jurisdictionSection">Aid olduğu bölmə:</label>
+    <input type="text" id="jurisdictionSection" required><br><br>
+
+    <label for="jurisdictionType">Növ:</label>
+    <select id="jurisdictionType" required>
+        <option value="POLICE_DEPARTMENT">Polis İdarəsi</option>
+        <option value="CITY">Şəhər</option>
+        <option value="REGION">Region</option>
+        <option value="DIVISION">Bölmə</option>
+    </select>
+    <br><br>
+
+    <button type="button" onclick="addJurisdiction()">Əlavə Et</button>
+</form>
+
+<h2>Jurisdiction Məlumatını Al</h2>
+<label for="jurisdictionId">Jurisdiction ID daxil edin:</label>
+<input type="text" id="jurisdictionId" required>
+<button onclick="getJurisdiction()">Məlumatı Al</button>
+
+<h2>Nəticə:</h2>
+<pre id="result"></pre>
+
+<script src="script.js"></script>
+</body>
+</html>
